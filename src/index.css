@@ -1,1 +1,28 @@
-@import "tailwindcss"
+@import "tailwindcss";
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+  100% {
+    border-color: white;
+  }
+}
+
+/* Classe personalizada para o efeito de digitação */
+.animate-typing {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid white;
+  width: 0;
+  animation: typing 2s steps(12) 1s forwards, blink .75s step-end infinite;
+}

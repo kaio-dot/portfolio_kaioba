@@ -18,7 +18,7 @@ export default function Header(){
     <header className="fixed top-0 left-0 w-full bg-gray-950/80 backdrop-blur-md border-b border-gray-800 z-50">
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo + Nome */}
-        <Link to="/" className="text-2xl font-bold text-white tracking-tight">
+        <Link to="/" className="text-2xl font-bold text-white tracking-tight animate-typing">
           <span className="text-blue-500">Kaioba</span>.dev
         </Link>
 
