@@ -43,3 +43,38 @@
 .animate-fade-in {
   animation: fade-in 0.5s ease-out;
 }
+
+.texting-contact{
+  flex:1;
+  text-align: center;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in {
+  animation: slide-in 1s ease-out;
+}
+
+@keyframes icons-slides-up {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-icons-slides-up {
+  animation: icons-slides-up 1s ease-out;
+}
