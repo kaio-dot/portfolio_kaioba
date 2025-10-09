@@ -18,8 +18,10 @@ export default function Header(){
     <header className="fixed top-0 left-0 w-full bg-gray-950/80 backdrop-blur-md border-b border-gray-800 z-50">
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo + Nome */}
-        <Link to="/" className="text-2xl font-bold text-white tracking-tight animate-typing">
-          <span className="text-blue-500">Kaioba</span>.dev
+        <Link to="/" className="text-2xl font-bold text-white tracking-tight">
+          <span className="inline-block animate-typing">
+            <span className="text-blue-500">Kaioba</span>.dev
+          </span>
         </Link>
 
         {/* Menu Desktop */}
@@ -35,7 +37,6 @@ export default function Header(){
           ))}
         </nav>
 
-        //Menu Mobile
         <button
           className="md:hidden text-gray-300 focus:outline-none"
           onClick={toggleMenu}
