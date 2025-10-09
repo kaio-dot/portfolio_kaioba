@@ -1,4 +1,4 @@
-import { FaGithub, FaEnvelope, FaLinkedinIn } from 'react-icons/fa';
+import { FaGithub, FaEnvelope, FaLinkedinIn, FaDownload } from 'react-icons/fa';
 
 export default function Contact() {
   return (
@@ -16,6 +16,13 @@ export default function Contact() {
         </a>
         <a className="text-blue-400 hover:text-blue-300 transition-transform duration-300 hover:scale-105 animate-icons-slides-up" href="https://github.com/kaio-dot" target="_blank" rel="noreferrer">
           <FaGithub size={60} />
+        </a>
+      </div>
+
+      <div className="mt-12 text-center">
+        <a className="inline-flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white px-5 py-3 rounded-lg font-medium transition-transform hover:scale-105" href="public/resume.pdf" download="Kaioba_Resume.pdf">
+          <FaDownload size={100} className="text-lg group-hover:rotate-[-20deg] transition-transform duration-300" />
+          Baixar Currículo
         </a>
       </div>
     </section>
