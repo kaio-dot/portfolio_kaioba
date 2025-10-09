@@ -106,7 +106,7 @@ export default function About() {
       {/* Tecnologias */}
 
       <div className="mt-10">
-        <SectionTitle title="Tecnologias" subtitle="Algumas das stacks que eu uso" />
+        <SectionTitle title="Tecnologias" subtitle="Algumas das stacks e ferramentas que eu uso" />
 
         <div className="mt-4">
           <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6 items-center">
