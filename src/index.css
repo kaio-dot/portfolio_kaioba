@@ -29,7 +29,7 @@
     blink .6s step-end 1.6s infinite;
 }
 
-keyframes fade-in {
+@keyframes fade-in {
   from {
     opacity: 0;
     transform: translateY(-10px);
@@ -41,5 +41,5 @@ keyframes fade-in {
 }
 
 .animate-fade-in {
-  animation: fade-in 0.5s ease-in-out;
+  animation: fade-in 0.5s ease-out;
 }
