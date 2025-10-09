@@ -1,5 +1,20 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+
+const navVariants = {
+  hidden: { opacity: 0, y: -10 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, staggerChildren: 0.1 },
+  },
+};
+
+const linkVariants = {
+  hidden: { opacity: 0, y: -5 },
+  visible: { opacity: 1, y: 0 },
+};
 
 export default function Header(){
     const [menuOpen, setMenuOpen] = useState(false);
@@ -25,17 +40,23 @@ export default function Header(){
         </Link>
 
         {/* Menu Desktop */}
-        <nav className="hidden md:flex space-x-8">
+        <motion.nav
+         variants={navVariants}
+         initial="hidden"
+         animate="visible"
+         className="hidden md:flex space-x-8"
+        >
           {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              to={link.path}
-              className="text-gray-300 hover:text-blue-400 transition-colors"
-            >
-              {link.name}
-            </Link>
+            <motion.div key={link.name} variants={linkVariants}>
+              <Link
+                to={link.path}
+                className="text-gray-300 hover:text-blue-400 transition-colors duration-300"
+              >
+                {link.name}
+              </Link>
+            </motion.div>
           ))}
-        </nav>
+        </motion.nav>
 
         <button
           className="md:hidden text-gray-300 focus:outline-none"
