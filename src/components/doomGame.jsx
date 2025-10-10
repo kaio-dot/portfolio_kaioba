@@ -1,24 +1,30 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
+import { Dos } from "js-dos";
 
 export default function DoomGame() {
+  const canvasRef = useRef(null);
+
   useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://js-dos.com/6.22/current/js-dos.js";
-    script.onload = () => {
-      window.Dos(document.getElementById("jsdos"), {
-        wdosboxUrl: "https://js-dos.com/6.22/current/wdosbox.js",
-      }).ready((fs, main) => {
-        fs.extract("https://js-dos.com/6.22/current/test/dosbox-x.zip").then(() =>
-          main(["-c", "doom"])
-        );
-      });
-    };
-    document.body.appendChild(script);
-  }, []);
+    Dos(canvasRefRef.current, {
+      wdosboxUrl: "https://js-dos.com/6.22/current/wdosbox.js"
+    }).ready((fs,main) => {
+      fs.createFile("/Doom1.WAD", "/doom/Doom1.WAD", { base64: false }).then(() => {
+        main(["-iwad", "/doom1.wad"]);
+    });
+  });
+}, []);
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-black">
-      <div id="jsdos" style={{ width: "500px", height: "300px" }}></div>
+    <div className="flex justify-center items-center h-screen bg-black">
+      <canvas ref={canvasRef} width="440" height="200"></canvas>
     </div>
-  );
+
+
+  )
+
+
+
+
+
+
 }
