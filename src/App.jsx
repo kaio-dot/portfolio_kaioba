@@ -5,6 +5,7 @@ import Home from "./pages/home"
 import About from "./pages/about"
 import Projects from "./pages/projects"
 import Contact from "./pages/contact"
+import DoomGame from "./components/doomGame";
 
 function App(){
   return (
@@ -13,7 +14,7 @@ function App(){
         <Header />
         <main className="flex-grow container mx-auto px-4 py-8">
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<DoomGame />} />
             <Route path="/about" element={<About />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/contact" element={<Contact />} />
