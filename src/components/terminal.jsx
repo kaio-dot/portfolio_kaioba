@@ -30,12 +30,8 @@ export default function Terminal({ onClose }) {
   const defaultWelcome = "Bem-vindo ao terminal do Kaioba 💻\nDigite 'help' para ver os comandos disponíveis.";
   let welcomeMessage = "";
   try {
-    // eslint-disable-next-line no-undef
     if (typeof window !== "undefined") {
-      // usa uma flag global simples
-      // eslint-disable-next-line no-undef
       if (!window.__terminalWelcomeShown) {
-        // eslint-disable-next-line no-undef
         window.__terminalWelcomeShown = true;
         welcomeMessage = defaultWelcome;
       }
