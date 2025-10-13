@@ -25,8 +25,6 @@ export default function Terminal({ onClose }) {
     },
   };
 
-  // Mostrar a mensagem de boas-vindas apenas uma vez por sessão.
-  // Isso evita que bibliotecas que imprimem a mensagem no mount (ex.: em StrictMode) mostrem duas vezes.
   const defaultWelcome = "Bem-vindo ao terminal do Kaioba 💻\nDigite 'help' para ver os comandos disponíveis.";
   let welcomeMessage = "";
   try {
