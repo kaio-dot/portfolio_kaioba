@@ -20,7 +20,7 @@ export default function Contact() {
       </div>
 
       <div className="mt-12 text-center">
-        <a className="inline-flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white px-5 py-3 rounded-lg font-medium transition-transform hover:scale-105" href="https://kaioba-resume.tiiny.site" download="Kaioba_Resume.pdf">
+        <a className="inline-flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white px-5 py-3 rounded-lg font-medium transition-transform hover:scale-105" href="https://kaioba-resume.tiiny.site">
           <FaDownload size={100} className="text-lg group-hover:rotate-[-20deg] transition-transform duration-300" />
           Baixar Currículo
         </a>
